@@ -1,0 +1,31 @@
+{
+  "name": "hapicasts",
+  "version": "0.0.1",
+  "description": "A screencast series on hapijs",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -a code -t 100 -L"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtharrison/hapicasts.git"
+  },
+  "keywords": [
+    "hapi",
+    "learning",
+    "screencasts",
+    "hapijs",
+    "node.js"
+  ],
+  "author": "Matt Harrison",
+  "license": "BSD-3",
+  "bugs": {
+    "url": "https://github.com/mtharrison/hapicasts/issues"
+  },
+  "homepage": "https://github.com/mtharrison/hapicasts",
+  "dependencies": {
+    "code": "^1.5.0",
+    "glue": "^2.1.1",
+    "hapi": "^8.8.1"
+  }
+}
