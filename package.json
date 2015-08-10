@@ -4,7 +4,8 @@
   "description": "A screencast series on hapijs",
   "main": "index.js",
   "scripts": {
-    "test": "lab -a code -t 100 -L"
+    "test": "lab -a code -t 100 -L",
+    "build": "browserify public/js/main.js -o public/js/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,11 @@
   },
   "homepage": "https://github.com/mtharrison/hapicasts",
   "dependencies": {
+    "browserify": "^11.0.1",
     "code": "^1.5.0",
     "glue": "^2.1.1",
-    "hapi": "^8.8.1"
+    "handlebars": "^3.0.3",
+    "hapi": "^8.8.1",
+    "react": "^0.13.3"
   }
 }
