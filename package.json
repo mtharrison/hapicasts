@@ -4,8 +4,10 @@
   "description": "A screencast series on hapijs",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "lab -a code -t 100 -L",
-    "build": "browserify public/js/main.js -o public/js/bundle.js"
+    "build": "browserify -p [minifyify --no-map] --extension .jsx -t reactify  public/**/*.jsx -o public/js/bundle.js",
+    "watch": "watchify -p [minifyify --no-map] --extension .jsx -t reactify public/**/*.jsx --outfile public/js/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -26,10 +28,20 @@
   "homepage": "https://github.com/mtharrison/hapicasts",
   "dependencies": {
     "browserify": "^11.0.1",
-    "code": "^1.5.0",
     "glue": "^2.1.1",
     "handlebars": "^3.0.3",
     "hapi": "^8.8.1",
-    "react": "^0.13.3"
+    "items": "^1.1.0",
+    "moment": "^2.10.6",
+    "nodemon": "^1.4.0",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
+    "wreck": "^6.1.0"
+  },
+  "devDependencies": {
+    "code": "^1.5.0",
+    "minifyify": "^7.0.5",
+    "react-tools": "^0.13.3",
+    "watchify": "^3.3.1"
   }
 }
