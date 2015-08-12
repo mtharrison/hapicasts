@@ -2,7 +2,7 @@ var React = require('react');
 var VideoGridItem = require('./VideoGridItem');
 
 var VideoGrid = module.exports = React.createClass({
-    displayName: 'VideoGrid',
+    
     render: function () {
 
         var chunk = 3;
