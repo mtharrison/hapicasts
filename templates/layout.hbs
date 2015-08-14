@@ -10,30 +10,38 @@
 </head>
 <body>
 
-    
     <header>
         <div class="row">
-            <div class="columns medium-offset-3 medium-6">
-                <h1><a href="/"><img src="/images/logo.png" alt="hapicasts"></a></h1>
-                <nav>
-                    <ul>
-                        <li><a href="/#/about">ABOUT</a></li>
-                        <li><a href="/#/request">REQUESTS</a></li>
-                        <li><a href="/#/contact">CONTACT</a></li>
-                        <li><a href="http://manning.com/harrison">BUY THE BOOK</a></li>
-                    </ul>
-                </nav>
+            <div class="columns medium-3">
+                <h1><a href="/#/"><img src="/images/hapi.png" alt="hapicasts"></a></h1>
             </div>
+            <div class="columns medium-4 login">
+                {{#if user}}
+                    <p>Signed in as {{user.profile.displayName}}. <a href="/logout">Logout?</a></p>
+                {{else}}
+                    <a href="/login" class="button small radius">Sign in with Github</a>
+                {{/if}}
+            </div>
+        </div>
+        <div class="row">
+            <nav class="columns medium-12">
+                <ul>
+                    <li><a href="/#/pages/about">ABOUT</a></li>
+                    {{#if user}}
+                        <li><a href="/#/pages/request">REQUEST VIDEOS</a></li>
+                    {{/if}}
+                    <li><a href="/#/pages/contact">CONTACT</a></li>
+                    <li><a href="http://manning.com/harrison">GET THE BOOK</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     
     <div class="container">
-
         {{{content}}}
-
-        <footer>&copy; 2015 Matt Harrison</footer>
-
     </div>
+
+    <footer>&copy; 2015 Matt Harrison<br/>The hapi logo and mark are released under <a href="https://raw.githubusercontent.com/hapijs/hapi/master/LICENSE">BSD license</a></footer>
 
     <script src="/js/bundle.js"></script>
 </body>

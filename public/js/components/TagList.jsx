@@ -7,7 +7,7 @@ var TagList = module.exports = React.createClass({
         var tags = this.props.tags || [];
         tags = tags.map(function (tag) {
 
-            return <span>{tag}</span>
+            return <a href={"/#/videos/tags/" + tag}>{tag}</a>
         });
 
         return (

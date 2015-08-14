@@ -5,82 +5,145 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     text-align: center;
-    color: #222;
+    color: #3c3b30;
 }
-h1, h3, h3 {
+
+h1, h3, h3, h4 {
+    color: #3c3b30;
     font-weight: 700;
 }
+
 h4 {
     font-size: 2rem;
     margin: 1rem 0 0 0;
-    color: #f6941e;
+    font-weight: 400;
 }
+
 a {
     color: #222;
 }
+
 a:hover {
     color: #222;
+}
+
+/*Foundation overrides*/
+
+.button {
+    background: #f4aa33;
+    color: #3c3b30;
+    border-color: #3c3b30;
+    border-width: 1px;
+}
+
+.button:hover, .button:focus {
+    background: #3c3b30;
+    color: #f4aa33;
 }
 
 /* Layout */
 
 header {
     font-family: 'Raleway', sans-serif;
-    background: #f6941e;   
+    /*background: #f6941e;   */
+    background: #f4aa33;
     top: 0;
     z-index: 5000;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #3c3b30;;
 }
+
 header h1 {
-    margin-bottom: 30px;
     font-size: 8rem;
     margin: auto;
-    position: relative;
-    top: -25px;
 }
+
 header h1 img {
+    /*width: 100%;*/
+    display: block;
+    /*max-width: 200px;*/
     position: relative;
-    top: 30px;
-    width: 100%;
+    top: 10px;
 }
+
+header .button {
+    margin-top: 20px;
+}
+
+header .login {
+    margin-top: 10px;
+}
+
+header a {
+    text-decoration: underline;
+}
+
 nav{
     list-style:none;
     margin:0;
     padding:0;
-    text-align:center;
+    text-align:left;
 }
+
 nav ul {
     padding: 0;
+    margin: 10px 0;
 }
+
 nav li{
     display:inline;
 }
+
 nav a{
     display:inline-block;
     padding:10px;
     text-decoration: underline;
 }
+
+.container {
+    text-align: left;
+}
+
 footer {
     margin-top: 40px;
+    padding-bottom: 15px;
+}
+
+footer a {
+    text-decoration: underline;
 }
 
 /*Videos*/
 
 .video-preview {
-    padding: 15px;
+    padding: 10px;
     text-align: left;
     /*transition: all .2s ease-in-out;*/
 }
+
 .video-preview h4 {
     font-size: 22px;
     margin-bottom: 5px;
 }
+
 .video-preview .date {
     color: #aaa;
 }
+
 .video-preview:hover {
     /*transform: scale(1.1);*/
 }
+
+.video-preview .thumbnail {
+    min-height: 130px;
+    background-color: black;
+    display: block;
+}
+
+.video-preview .inner {
+    background: #f8f8f8;
+    padding: 10px;
+}
+
 iframe {
     border: none;
     width: 100%;
@@ -88,7 +151,7 @@ iframe {
 .tagList {
     overflow: hidden;
 }
-.tagList span {
+.tagList a {
     display: inline-block;
     background-color: #f6941e;
     color: #fff;
