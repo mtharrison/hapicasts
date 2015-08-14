@@ -32,7 +32,8 @@
     "browserify": "^11.0.1",
     "glue": "^2.1.1",
     "handlebars": "^3.0.3",
-    "hapi": "^8.8.1",
+    "hapi": "9.x.x",
+    "inert": "^3.0.1",
     "items": "^1.1.0",
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
@@ -40,6 +41,7 @@
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "reactify": "^1.1.1",
+    "vision": "^2.0.1",
     "wreck": "^6.1.0",
     "yar": "^3.0.3"
   },
