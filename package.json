@@ -29,7 +29,6 @@
   "homepage": "https://github.com/mtharrison/hapicasts",
   "dependencies": {
     "bell": "^5.0.1",
-    "browserify": "^11.0.1",
     "dotenv": "^1.2.0",
     "glue": "^2.1.1",
     "handlebars": "^3.0.3",
@@ -38,18 +37,19 @@
     "items": "^1.1.0",
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
-    "nodemon": "^1.4.0",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
-    "reactify": "^1.1.1",
     "vision": "^2.0.1",
     "wreck": "^6.1.0",
     "yar": "^3.0.3"
   },
   "devDependencies": {
+    "browserify": "^11.0.1",
     "code": "^1.5.0",
     "minifyify": "^7.0.5",
+    "nodemon": "^1.4.0",
     "react-tools": "^0.13.3",
+    "reactify": "^1.1.1",
     "watchify": "^3.3.1"
   }
 }
