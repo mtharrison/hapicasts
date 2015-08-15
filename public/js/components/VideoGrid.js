@@ -6,16 +6,16 @@ var VideoGrid = module.exports = React.createClass({
 
     getInitialState: function () {
 
-        return { videos: [] };
+        return { videos: [], loaded: false };
     },
 
     componentDidMount: function () {
 
         var self = this;
 
-        Wreck.get('/api/videos', { json: true }, function (err, res, payload) {
+        Wreck.get('/api/videos', { json: 'force' }, function (err, res, payload) {
 
-            self.setState({ videos: payload.videos });
+            self.setState({ videos: payload.videos, loaded: true });
         });
     },
     
@@ -35,6 +35,11 @@ var VideoGrid = module.exports = React.createClass({
             );
         }
 
-        return <div className="videoGrid">{output}</div>;
+        return (
+            <div>
+                <img className={this.state.loaded ? 'loading finished' : 'loading'} src="/images/helmet.png" alt=""/>
+                <div className="videoGrid">{output}</div>
+            </div>
+        );
     }
 });

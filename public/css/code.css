@@ -1,0 +1,41 @@
+.highlight > pre,
+a > code,
+li > code,
+pre > code,
+p > code {
+    font-family: 'Inconsolata';
+    padding: 0.2rem 0.33rem;
+    background: #f3f3f3;
+}
+
+pre {
+    overflow: visible;
+}
+
+.highlight > pre,
+pre > code {
+    background-color: #f8f8f8;
+    text-align: left;
+    display: block;
+    padding: 0.5em;
+    margin: 0;
+    padding: 20px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.pl-c {
+    font-style: italic;
+}
+
+.pl-st,
+.pl-k,
+.pl-s {
+    font-weight: 700;
+}
+
+.pl-c1,
+.pl-s1 {
+    color: #f4aa33;
+}

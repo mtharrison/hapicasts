@@ -1,3 +1,9 @@
+About
+================================
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna dui. In id dolor viverra, pharetra ipsum non, volutpat erat. Nunc ultrices scelerisque lectus, non aliquet purus. Phasellus eu purus eros. Suspendisse ultricies ut tortor vel pharetra. Phasellus mattis ac mauris blandit convallis. Nulla facilisi. Integer euismod quam sit amet imperdiet iaculis. Aenean dignissim gravida convallis. Cras nec feugiat metus. Phasellus purus neque, laoreet congue nibh vel, tincidunt iaculis quam. Ut sagittis velit vel laoreet congue. Nunc nec augue quis nibh viverra vehicula. Integer tincidunt id est pellentesque imperdiet. Donec id mi eu odio sagittis vehicula nec a enim.
+
+```javascript
 exports.register = function (server, options, next) {
 
     server.route({
@@ -37,3 +43,4 @@ exports.register = function (server, options, next) {
 
 
 exports.register.attributes = { name: 'api' };
+```

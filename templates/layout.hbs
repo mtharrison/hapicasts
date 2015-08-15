@@ -6,32 +6,33 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/foundation.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Raleway|Open+sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/code.css">
+    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand:400,700|Inconsolata:400,700|Raleway|Open+sans:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
     <header>
         <div class="row">
-            <div class="columns medium-5">
+            <div class="columns large-6 large-offset-3">
                 <h1><a href="/#/"><img src="/images/logo.png" alt="hapicasts"></a></h1>
-            </div>
-            <div class="columns medium-4 login">
-                {{#if user}}
-                    <p>Signed in as {{user.profile.displayName}}. <a href="/logout">Logout?</a></p>
-                {{else}}
-                    <a href="/login" class="button small radius">Sign in with Github</a>
-                {{/if}}
             </div>
         </div>
         <div class="row">
-            <nav class="columns medium-12">
+            <nav class="columns large-12">
                 <ul>
-                    <li><a href="/#/pages/about">ABOUT</a></li>
+                    <li><a href="/#/pages/about">What is this?</a></li>
                     {{#if user}}
-                        <li><a href="/#/pages/request">REQUEST VIDEOS</a></li>
+                        <li><a href="/#/pages/request">Request video</a></li>
                     {{/if}}
-                    <li><a href="/#/pages/contact">CONTACT</a></li>
-                    <li><a href="http://manning.com/harrison">GET THE BOOK</a></li>
+                    <li><a href="/#/pages/book">Get the book</a></li>
+                    |
+                    <li>
+                        {{#if user}}
+                            <a href="/logout">Signed in as {{user.profile.displayName}}. <strong>Logout?</strong></a>
+                        {{else}}
+                            <a href="/login">Sign in with Github</a>
+                        {{/if}}
+                    </li>
                 </ul>
             </nav>
         </div>

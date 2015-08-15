@@ -8,9 +8,10 @@ body {
     color: #3c3b30;
 }
 
-h1, h3, h3, h4 {
+h1, h2, h3, h3, h4 {
     color: #3c3b30;
     font-weight: 700;
+    font-family: 'Patrick Hand'
 }
 
 h4 {
@@ -19,11 +20,7 @@ h4 {
     font-weight: 400;
 }
 
-a {
-    color: #222;
-}
-
-a:hover {
+a, a:hover, a:active, a:visited {
     color: #222;
 }
 
@@ -45,7 +42,6 @@ a:hover {
 
 header {
     font-family: 'Raleway', sans-serif;
-    /*background: #f6941e;   */
     background: #f4aa33;
     top: 0;
     z-index: 5000;
@@ -58,11 +54,10 @@ header h1 {
 }
 
 header h1 img {
-    /*width: 100%;*/
     display: block;
-    /*max-width: 200px;*/
     position: relative;
-    top: 10px;
+    top: 20px;
+    position: relative;
 }
 
 header .button {
@@ -81,7 +76,6 @@ nav{
     list-style:none;
     margin:0;
     padding:0;
-    text-align:left;
 }
 
 nav ul {
@@ -96,11 +90,14 @@ nav li{
 nav a{
     display:inline-block;
     padding:10px;
-    text-decoration: underline;
+    font-family: 'Patrick Hand';
+    font-size: 1.2rem;
+    font-weight: 800
 }
 
 .container {
     text-align: left;
+    margin-top: 30px;
 }
 
 footer {
@@ -112,10 +109,46 @@ footer a {
     text-decoration: underline;
 }
 
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.loading {
+    margin: auto;
+    display: block;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 1000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 1000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+.loading.finished {
+    display: none;
+}
+
 /*Videos*/
 
 .video-preview {
-    padding: 10px;
+    padding: 5px;
     text-align: left;
     /*transition: all .2s ease-in-out;*/
 }
@@ -127,10 +160,6 @@ footer a {
 
 .video-preview .date {
     color: #aaa;
-}
-
-.video-preview:hover {
-    /*transform: scale(1.1);*/
 }
 
 .video-preview .thumbnail {
@@ -148,13 +177,15 @@ iframe {
     border: none;
     width: 100%;
 }
+
 .tagList {
     overflow: hidden;
 }
+
 .tagList a {
     display: inline-block;
     background-color: #f4aa33;;
-    color: #222;
+    color: #fff;
     padding: 1px 5px;
     margin: 0 5px 5px 0;
 }
