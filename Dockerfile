@@ -1,3 +1,12 @@
+# To run:
+#
+# docker run \
+#   -v ~/.env:/root/hapicasts/.env
+#   -v /etc/ssl:/etc/ssl
+#   -p 80:80
+#   -p 443:443
+#   hapicasts
+
 FROM ubuntu:14.04
 
 # Update ubuntu
@@ -24,7 +33,7 @@ ADD . /root/hapicasts
 # Install NPM dependencies
 
 RUN cd /root/hapicasts && \
-    npm install --save production
+    npm install --production
 
 ENV NODE_ENV production
 

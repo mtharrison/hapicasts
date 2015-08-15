@@ -30,6 +30,7 @@
   "dependencies": {
     "bell": "^5.0.1",
     "browserify": "^11.0.1",
+    "dotenv": "^1.2.0",
     "glue": "^2.1.1",
     "handlebars": "^3.0.3",
     "hapi": "9.x.x",
