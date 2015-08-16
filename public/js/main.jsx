@@ -22,13 +22,21 @@ var Page = require('./routes/page');
 var Video = require('./routes/video');
 
 
+// Load components
+
+var Header = require('./components/Header');
+
+
 var App = React.createClass({
 
     render: function () {
 
         return (
             <div className="App">
-                <RouteHandler/>
+                <Header/>
+                <div className="container"> 
+                    <RouteHandler/>
+                </div>
             </div>
         );
     }
@@ -36,7 +44,7 @@ var App = React.createClass({
 
 var routes = (
     <Route handler={App} path="/">
-        <DefaultRoute handler={Home} />
+        <DefaultRoute name="home" handler={Home} />
         <Route name="video" path="/videos/:id" handler={Video} />
         <Route name="page" path="/pages/:name" handler={Page} />
         <NotFoundRoute handler={NotFound}/>
@@ -44,5 +52,5 @@ var routes = (
 );
 
 Router.run(routes, Router.HistoryLocation, function (Handler) {
-    React.render(<Handler/>, document.getElementById('home'));
+    React.render(<Handler/>, document.getElementById('app'));
 });
