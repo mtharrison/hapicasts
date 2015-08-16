@@ -16,7 +16,7 @@ var VideoGridItem = module.exports = React.createClass({
                 <div className="inner">
                     <div className="thumb-container">
                         <img className="playButton" src="/public/images/play.png"/>
-                        <img src={video.thumbnail_large} />
+                        <img src={video.thumbnail_large.replace('http', 'https')} />
                     </div>
                     <h4>{video.title}</h4>
                     <p className="date">{video.upload_date ? Moment(new Date(video.upload_date)).fromNow() : ''}</p>
