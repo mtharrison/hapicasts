@@ -2,6 +2,8 @@ var Moment = require('moment');
 var React = require('react');
 var TagList = require('./TagList');
 
+var Link = require('react-router').Link;
+
 var VideoGridItem = module.exports = React.createClass({
 
     render: function () {
@@ -10,14 +12,16 @@ var VideoGridItem = module.exports = React.createClass({
         var className = 'video-preview medium-4 columns ' + (this.props.end ? 'end' : '');
 
         return (
-            <a href={'/videos/' + video.id} className={className}>
+            <Link to="video" params={{ id: video.id }} className={className}>
                 <div className="inner">
-                    <img className="playButton" src="/public/images/play.png"/>
-                    <img src={video.thumbnail_large} />
+                    <div className="thumb-container">
+                        <img className="playButton" src="/public/images/play.png"/>
+                        <img src={video.thumbnail_large} />
+                    </div>
                     <h4>{video.title}</h4>
                     <p className="date">{video.upload_date ? Moment(new Date(video.upload_date)).fromNow() : ''}</p>
                 </div>
-            </a>
+            </Link>
         );
     }
 });
