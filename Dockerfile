@@ -1,6 +1,7 @@
 # To run:
 
 # docker run \
+#   -d \
 #   -v ~/.env:/root/hapicasts/.env \
 #   -v /etc/ssl:/etc/ssl \
 #   -p 80:80 \
