@@ -185,6 +185,13 @@ footer a {
     padding: 10px;
 }
 
+.playButton {
+    position: absolute;
+    width: 25%;
+    left: 38%;
+    top: 17%;
+}
+
 iframe {
     border: none;
     width: 100%;

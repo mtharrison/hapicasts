@@ -10,13 +10,14 @@ var VideoGridItem = module.exports = React.createClass({
         var className = 'video-preview medium-4 columns ' + (this.props.end ? 'end' : '');
 
         return (
-            <div className={className}>
+            <a href={'/videos/' + video.id} className={className}>
                 <div className="inner">
-                    <a href={'/videos/' + video.id} className="thumbnail" ><img src={video.thumbnail_large} /></a>
-                    <a href={'/videos/' + video.id} ><h4>{video.title}</h4></a>
+                    <img className="playButton" src="/public/images/play.png"/>
+                    <img src={video.thumbnail_large} />
+                    <h4>{video.title}</h4>
                     <p className="date">{video.upload_date ? Moment(new Date(video.upload_date)).fromNow() : ''}</p>
                 </div>
-            </div>
+            </a>
         );
     }
 });
