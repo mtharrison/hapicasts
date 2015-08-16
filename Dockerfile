@@ -1,10 +1,10 @@
 # To run:
 #
 # docker run \
-#   -v ~/.env:/root/hapicasts/.env
-#   -v /etc/ssl:/etc/ssl
-#   -p 80:80
-#   -p 443:443
+#   -v ~/.env:/root/hapicasts/.env \
+#   -v /etc/ssl:/etc/ssl \
+#   -p 80:80 \
+#   -p 443:443 \
 #   hapicasts
 
 FROM ubuntu:14.04
