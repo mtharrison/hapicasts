@@ -100,6 +100,18 @@ nav a{
     margin-top: 30px;
 }
 
+.sidebar p {
+    font-size: 0.9rem;
+}
+
+.sidebar img {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: underline;
+}
+
 footer {
     margin-top: 40px;
     padding-bottom: 15px;
@@ -125,7 +137,7 @@ footer a {
 }
 
 .loading {
-    margin: auto;
+    margin: 40px auto;
     display: block;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 1000ms;
@@ -191,6 +203,10 @@ iframe {
 }
 
 /* error */
+
+.error {
+    text-align: center;
+}
 
 .error h3, .error h4{
     font-size: 50px;

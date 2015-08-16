@@ -1,3 +1,4 @@
+var Loading = require('./Loading');
 var React = require('react');
 var VideoGridItem = require('./VideoGridItem');
 var Wreck = require('wreck');
@@ -37,7 +38,7 @@ var VideoGrid = module.exports = React.createClass({
 
         return (
             <div>
-                <img className={this.state.loaded ? 'loading finished' : 'loading'} src="/images/helmet.png" alt=""/>
+                <Loading loaded={this.state.loaded}/>
                 <div className="videoGrid">{output}</div>
             </div>
         );

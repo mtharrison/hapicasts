@@ -4,13 +4,14 @@ var Sidebar = module.exports = React.createClass({
 
     render: function () {
 
-        var className = 'columns medium-' + this.props.size;
+        var className = 'sidebar columns medium-' + this.props.size;
 
         return (
             <div className={className}>
-                <h3>Blah blah blah!</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae magna dui. In id dolor viverra, pharetra ipsum non, volutpat erat. Nunc ultrices scelerisque lectus, non aliquet purus.</p>
-                <img src="/images/hjsia.png"/>
+                <h3>Get the book!</h3>
+                <img src="/public/images/hjsia.png"/>
+                <p>Packed with examples, this book takes you from your first simple server through the skills you'll need to build a complete application. In it, you'll learn how to build websites and APIs, implement caching, authentication, validation, error handling, and a lot more. You'll also explore vital techniques for production applications, such as testing, monitoring, deployment, and documentation.</p>
+                <p><a href="http://manning.com/harrison">Get it today with 39% off (using code mharrison39)</a></p>
             </div>
         );
     }

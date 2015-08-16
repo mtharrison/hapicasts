@@ -3,47 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>hapicasts</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/foundation.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/code.css">
+    <link rel="stylesheet" href="/public/css/normalize.css">
+    <link rel="stylesheet" href="/public/css/foundation.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/code.css">
     <link href='http://fonts.googleapis.com/css?family=Patrick+Hand:400,700|Inconsolata:400,700|Raleway|Open+sans:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-    <header>
-        <div class="row">
-            <div class="columns large-6 large-offset-3">
-                <h1><a href="/#/"><img src="/images/logo.png" alt="hapicasts"></a></h1>
-            </div>
-        </div>
-        <div class="row">
-            <nav class="columns large-12">
-                <ul>
-                    <li><a href="/#/pages/about">What is this?</a></li>
-                    {{#if user}}
-                        <li><a href="/#/pages/request">Request video</a></li>
-                    {{/if}}
-                    <li><a href="/#/pages/book">Get the book</a></li>
-                    |
-                    <li>
-                        {{#if user}}
-                            <a href="/logout">Signed in as {{user.profile.displayName}}. <strong>Logout?</strong></a>
-                        {{else}}
-                            <a href="/login">Sign in with Github</a>
-                        {{/if}}
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    {{> header}}
     
     <div class="container">
         {{{content}}}
     </div>
 
-    <footer>&copy; 2015 Matt Harrison<br/>The hapi logo and mark are released under <a href="https://raw.githubusercontent.com/hapijs/hapi/master/LICENSE">BSD license</a></footer>
+    {{> footer}}
 
-    <script src="/js/bundle.js"></script>
+    <script src="/public/js/bundle.js"></script>
 </body>
 </html>

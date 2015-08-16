@@ -1,0 +1,16 @@
+<nav class="columns large-12">
+    <ul>
+        <li><a href="/pages/about">What is this?</a></li>
+        {{#if user}}
+            <li><a href="/pages/request">Request video</a></li>
+        {{/if}}
+        |
+        <li>
+            {{#if user}}
+                <a href="/logout">Signed in as {{user.profile.displayName}}. <strong>Logout?</strong></a>
+            {{else}}
+                <a href="/login">Sign in with Github</a>
+            {{/if}}
+        </li>
+    </ul>
+</nav>
