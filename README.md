@@ -2,7 +2,7 @@
 ----
 ##What is this?
 
-It's a site devoted to teaching hapi.js through screencasts. It's an opportunity for me to get into greater depth on material I couldn't in [the book](http://manning.com/harrison), in a hands-on way. Books aren't for everyone, sometimes a different media like video reaches people in a different way
+It's a site devoted to teaching hapi.js through screencasts. It's an opportunity for me to get into greater depth on material I couldn't in [the book](http://manning.com/harrison), in a hands-on way. Books aren't for everyone, sometimes a different media like video reaches people in a different way.
 
 ##When will this site be ready?
 
@@ -16,7 +16,7 @@ YES! There's going to be a feature on the site to request and vote on videos (si
 
 Not at the moment. If you wish to make a suggestion however, I'm all ears. Please make an issue.
 
-##What's the site built with
+##What's the site built with?
 
 - hapi (of course)
 - React
