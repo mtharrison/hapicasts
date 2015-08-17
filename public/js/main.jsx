@@ -24,23 +24,8 @@ var Video = require('./routes/video');
 
 // Load components
 
+var App = require('./components/App');
 var Header = require('./components/Header');
-
-
-var App = React.createClass({
-
-    render: function () {
-
-        return (
-            <div className="App">
-                <Header/>
-                <div className="container"> 
-                    <RouteHandler/>
-                </div>
-            </div>
-        );
-    }
-});
 
 var routes = (
     <Route handler={App} path="/">

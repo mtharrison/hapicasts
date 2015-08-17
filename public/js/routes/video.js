@@ -1,6 +1,8 @@
 var React = require('react');
 
-var Video = module.exports = React.createClass({
+var Video = require('../components/Video');
+
+var VideoRoute = module.exports = React.createClass({
 
     contextTypes: {
         router: React.PropTypes.func
@@ -11,7 +13,7 @@ var Video = module.exports = React.createClass({
         var id = this.context.router.getCurrentParams().id;
 
         return (
-            <div>Hiya</div>
+            <Video id={id}/>
         );
     }
 });
