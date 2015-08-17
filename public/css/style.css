@@ -253,3 +253,105 @@ iframe {
 .error h3, .error h4{
     font-size: 50px;
 }
+
+/*Request page*/
+
+.request-input-container {
+    height: 50px;
+    display: flex;
+}
+
+.request-input {
+    border-radius: 10px 0 0 10px!important;
+    width: 80%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: inherit!important;
+    align-items: stretch;
+}
+
+.request-submit {
+    border-radius: 0 10px 10px 0;
+    width: 20%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    background: #f4aa33;
+    color: #222;
+    font-family: 'Patrick Hand';
+    font-size: 1.2rem;
+}
+
+.request-submit:hover {
+    background: #f4aa33;
+}
+
+.request-submit:active {
+    background: #f4aa33;
+}
+
+.request-suggestions {
+    margin-top: 20px;
+}
+
+.request-suggestion {
+    display: flex;
+    padding: 0px;
+    
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.request-suggestion > div {
+    float: left;
+    align-items: stretch;
+}
+
+.request-suggestion .title {
+    font-family: 'Patrick Hand';
+    font-size: 1.2rem;
+    width: 50%;
+    background-color: #f4aa33;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+.request-suggestion .tags {
+    width: 40%;
+    padding: 10px;
+    background-color: #ccc;
+}
+
+.request-suggestion .votes {
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+    background-color: #aaa;
+    border-radius: 0 10px 10px 0;
+    font-weight: bold;
+}
+
+.request-suggestion-tag {
+    float: left;
+    background-color: white;
+    margin-right: 10px;
+    padding: 4px 8px;
+}
+
+.request-suggestion button {
+    padding: 4px;
+    margin: 0;
+    margin: 0px 10px;
+}
+
+.request-suggestion-tag.confirmed {
+    /*background: orange*/
+}
+
+.request-suggestion-tag.in-progress {
+    /*background: green*/
+}
