@@ -1,0 +1,21 @@
+<div id="app" class="row">
+    <div class="columns medium-9">
+        {{#each videos}}
+            <div class="row">
+                {{#each this}}
+                    <a href="/video/{{id}}" class="video-preview sidebar columns medium-4">
+                        <div class="inner">
+                            <div class="thumb-container">
+                                <img class="playButton" src="/public/images/play.png"/>
+                                <img src={{thumbnail_large}} />
+                            </div>
+                            <h4>{{title}}</h4>
+                            <p class="date">{{video.upload_date}}</p>
+                        </div>
+                    </a>
+                {{/each}}
+            </div>
+        {{/each}}
+    </div>
+    {{> sidebar}}
+</div>
