@@ -34,8 +34,7 @@ ADD . /root/hapicasts
 # Install NPM dependencies
 
 RUN cd /root/hapicasts && \
-    npm install && \
-    npm run build
+    npm install --production
 
 ENV NODE_ENV production
 
