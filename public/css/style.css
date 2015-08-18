@@ -256,6 +256,10 @@ iframe {
 
 /*Request page*/
 
+#request h2 {
+    text-align: center;
+}
+
 .request-input-container {
     height: 50px;
     display: flex;
