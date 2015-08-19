@@ -20,7 +20,7 @@ Not at the moment. If you wish to make a suggestion however, I'm all ears. Pleas
 
 - hapi (of course)
 - React
-- React Router
+- Redux
 - Browserify
 
 Checkout the package.json for a full list of dependencies
