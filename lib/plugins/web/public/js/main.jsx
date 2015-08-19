@@ -3,27 +3,45 @@
 var _ = require('lodash');
 var React = require('react');
 var Redux = require('redux');
+var Wreck = require('wreck');
 
 // Load Components
 
 var SuggestionsApp = require('./components/SuggestionsApp');
 
+var handleNewSuggestion = function (action) {
+
+    var options = { payload: JSON.stringify({ title: action.title }), json: 'force' };
+    Wreck.post('/api/suggestion', options, function (err, response, payload) {
+
+        store.dispatch({ type: 'SERVER_DATA', data: payload });
+    });
+};
+
+var rehydrate = function () {
+
+    var options = { json: 'force' };
+    Wreck.get('/api/suggestion', options, function (err, response, payload) {
+
+        store.dispatch({ type: 'SERVER_DATA', data: payload });
+    });
+};
 
 var reducer = function (state, action) {
 
     switch(action.type) {
-        case 'newSuggestion':
+        case 'SERVER_DATA':
             return _.assign({}, state, {
-                requestsAllowed: false,
-                suggestions: [].concat(state.suggestions, {
-                    id: state.suggestions + 1,
-                    title: action.title,
-                    votes: 1,
-                    tags: ['needs-moderation']
-                })
+                suggestions: action.data
             });
         break;
-        case 'downVote':
+        case 'NEW_SUGGESTION':
+
+            handleNewSuggestion(action);
+
+            return state;
+        break;
+        case 'DOWNVOTE':
             return _.assign({}, state, {
                 suggestions: state.suggestions.map(function (item) {
 
@@ -36,7 +54,7 @@ var reducer = function (state, action) {
             });
 
         break;
-        case 'upVote':
+        case 'UPVOTE':
             return _.assign({}, state, {
                 suggestions: state.suggestions.map(function (item) {
 
@@ -53,29 +71,9 @@ var reducer = function (state, action) {
     }
 };
 
-var store = Redux.createStore(reducer, {
-    requestsAllowed: true,
-    suggestions: [
-        {
-            id: 1,
-            title: 'Smart Configuration with Confidence',
-            tags: ['confirmed', 'in-progress'],
-            votes: 24
-        },
-        {
-            id: 2,
-            title: 'Composing Plugins with Glue',
-            tags: [],
-            votes: 5
-        },
-        {
-            id: 3,
-            title: 'A/B Testing with Configuration',
-            tags: ['confirmed'],
-            votes: 16
-        },
-    ]
-});
+var store = Redux.createStore(reducer, { suggestions: [], requestsAllowed: true });
+
+rehydrate();
 
 var render = function () {
 
