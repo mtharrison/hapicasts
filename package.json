@@ -7,8 +7,8 @@
     "start": "npm run watch & npm run dev",
     "dev": "nodemon index.js",
     "test": "lab -a code -t 100 -L",
-    "build": "browserify -p [minifyify --no-map] --extension .jsx -t reactify  lib/plugins/web/public/**/*.jsx -o lib/plugins/web/public/js/bundle.js",
-    "watch": "watchify --extension .jsx -t reactify lib/plugins/web/public/**/*.jsx --outfile lib/plugins/web/public/js/bundle.js"
+    "build": "browserify -p [minifyify --no-map] --extension .jsx -t reactify  public/**/*.jsx -o public/js/bundle.js",
+    "watch": "watchify --extension .jsx -t reactify public/**/*.jsx --outfile public/js/bundle.js"
   },
   "repository": {
     "type": "git",
