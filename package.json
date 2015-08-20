@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/mtharrison/hapicasts",
   "dependencies": {
+    "aws-sdk": "^2.1.45",
     "bell": "^5.0.1",
     "dotenv": "^1.2.0",
     "glue": "^2.1.1",
