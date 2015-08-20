@@ -45,6 +45,7 @@
   "devDependencies": {
     "browserify": "^11.0.1",
     "code": "^1.5.0",
+    "lab": "^5.15.1",
     "minifyify": "^7.0.5",
     "nodemon": "^1.4.0",
     "react-tools": "^0.13.3",
