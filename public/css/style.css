@@ -318,16 +318,10 @@ iframe {
 .request-suggestion .title {
     font-family: 'Patrick Hand';
     font-size: 1.2rem;
-    width: 50%;
+    width: 70%;
     background-color: #f4aa33;
     padding: 10px;
     border-radius: 10px 0 0 10px;
-}
-
-.request-suggestion .tags {
-    width: 40%;
-    padding: 10px;
-    background-color: #ccc;
 }
 
 .request-suggestion .votes {
@@ -339,11 +333,9 @@ iframe {
     font-weight: bold;
 }
 
-.request-suggestion-tag {
-    float: left;
-    background-color: white;
-    margin-right: 10px;
+.request-suggestion .status {
     padding: 4px 8px;
+    width: 20%;
 }
 
 .request-suggestion button {

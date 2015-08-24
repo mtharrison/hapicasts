@@ -14,15 +14,6 @@ var Suggestion = module.exports = React.createClass({
 
     render: function () {
 
-        var tags = this.props.suggestion.tags.map(function (tag) {
-
-            var className = 'request-suggestion-tag ' + tag;
-
-            return (
-                <div className={className}>{tag}</div>
-            );
-        });
-
         return (
             <div className="row">
                 <div className="request-suggestion columns medium-10 medium-offset-1">
@@ -31,7 +22,7 @@ var Suggestion = module.exports = React.createClass({
                         <button onClick={this.upVote}>u</button>
                         <button onClick={this.downVote}>d</button>
                     </div>
-                    <div className="tags">{tags}</div>
+                    <div className="status">{this.props.suggestion.status}</div>
                     <div className="votes">{this.props.suggestion.votes}</div>
                 </div>
             </div>
