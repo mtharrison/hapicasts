@@ -38,7 +38,7 @@ var SuggestionsApp = module.exports = React.createClass({
                     <button onClick={this.add} className="request-submit">Request</button>
                 </div>
             </div> :
-            <h2>Thanks for your suggestions!</h2>;
+            <h2>Thanks! I'll review your suggestion soon.</h2>;
 
         return (
             <div>

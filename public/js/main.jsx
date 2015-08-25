@@ -32,7 +32,8 @@ var reducer = function (state, action) {
     switch(action.type) {
         case 'SERVER_DATA':
             return _.assign({}, state, {
-                suggestions: action.data
+                suggestions: action.data.suggestions,
+                requestsAllowed: action.data.allowed
             });
         break;
         case 'NEW_SUGGESTION':
