@@ -6,7 +6,7 @@ It's a site devoted to teaching hapi.js through screencasts. It's an opportunity
 
 ##When will this site be ready?
 
-I'm mainly focussed at the moment on getting [my book](http://manning.com/harrison) finished so this is something of a backburner. Once that's finished I will be able to devote a lot of the time sacrificed to write it over to this project. That said I hope to get the site live with at least one video before the end of August 2015.
+I'm mainly focussed at the moment on getting [my book](http://manning.com/harrison) finished so this is something of a backburner. Once that's finished I will be able to devote a lot of the time sacrificed to write it over to this project. That said I hope to get the site live with at least one video before the end of 2015.
 
 ##Can we request videos?
 
