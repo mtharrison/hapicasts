@@ -21,16 +21,19 @@
     "hapijs",
     "node.js"
   ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "author": "Matt Harrison",
-  "license": "BSD-3",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/mtharrison/hapicasts/issues"
   },
   "homepage": "https://github.com/mtharrison/hapicasts",
   "dependencies": {
-    "aws-sdk": "^2.1.45",
     "bell": "^5.0.1",
     "dotenv": "^1.2.0",
+    "hapi": "8.x.x",
     "glue": "^2.1.1",
     "handlebars": "^3.0.3",
     "items": "^1.1.0",
